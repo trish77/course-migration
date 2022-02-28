@@ -164,56 +164,56 @@ body.tempusdominus-bootstrap-datetimepicker-widget-day-click {
     }
 
     .btn[data-action="incrementHours"]::after {
-        @extend .sr-only;
-        content: "Increment Hours";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="incrementMinutes"]::after {
-        @extend .sr-only;
-        content: "Increment Minutes";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="decrementHours"]::after {
-        @extend .sr-only;
-        content: "Decrement Hours";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="decrementMinutes"]::after {
-        @extend .sr-only;
-        content: "Decrement Minutes";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="showHours"]::after {
-        @extend .sr-only;
-        content: "Show Hours";
+        @extend .sr-only !optional;
+
     }
 
     .btn[data-action="showMinutes"]::after {
-        @extend .sr-only;
-        content: "Show Minutes";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="togglePeriod"]::after {
-        @extend .sr-only;
-        content: "Toggle AM/PM";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="clear"]::after {
-        @extend .sr-only;
-        content: "Clear the picker";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .btn[data-action="today"]::after {
-        @extend .sr-only;
-        content: "Set the date to today";
+        @extend .sr-only !optional;
+        content: "";
     }
 
     .picker-switch {
         text-align: center;
 
         &::after {
-            @extend .sr-only;
-            content: "Toggle Date and Time Screens";
+            @extend .sr-only !optional;
+            content: "";
         }
 
         td {
@@ -268,13 +268,13 @@ body.tempusdominus-bootstrap-datetimepicker-widget-day-click {
             }
 
             &.prev::after {
-                @extend .sr-only;
-                content: "Previous Month";
+                @extend .sr-only !optional;
+                content: "";
             }
 
             &.next::after {
-                @extend .sr-only;
-                content: "Next Month";
+                @extend .sr-only !optional;
+                content: "";
             }
         }
 

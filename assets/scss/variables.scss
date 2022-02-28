@@ -1,0 +1,171 @@
+// Bootstrap overrides variables
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$bs-gray-100: #f8f9fa !default;
+$bs-gray-200: #e9ecef !default;
+$bs-gray-300: #dee2e6 !default;
+$bs-gray-400: #ced4da !default;
+$bs-gray-500: #adb5bd !default;
+$bs-gray-600: #6c757d !default;
+$bs-gray-700: #495057 !default;
+$bs-gray-800: #343a40 !default;
+$bs-gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+        "100": $bs-gray-100,
+        "200": $bs-gray-200,
+        "300": $bs-gray-300,
+        "400": $bs-gray-400,
+        "500": $bs-gray-500,
+        "600": $bs-gray-600,
+        "700": $bs-gray-700,
+        "800": $bs-gray-800,
+        "900": $bs-gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+
+$bs-blue: #09c !default;
+$bs-pink: #e83e8c !default;
+$bs-red: #d9534f !default;
+$bs-orange: #fc7b00 !default;
+$bs-yellow: #8a6d3b !default;
+$bs-green: #5cb85c !default;
+$bs-teal: #3c763d !default;
+$bs-cyan: #31708f !default;
+
+
+$btn-font-weight: normal;
+
+
+$primary: $bs-blue !default;
+$secondary: $bs-gray-400 !default;
+$attention: $bs-orange !default;
+$success: $bs-green !default;
+$info: #07a8f9 !default;
+$warning: $bs-yellow !default;
+$danger: $bs-red !default;
+$light: $bs-gray-200 !default;
+$dark: $bs-gray-800 !default;
+
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+   // "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+  ),
+  $theme-colors
+);
+
+$alert-bg-level:                    -10 !default;
+$alert-border-level:                -8 !default;
+$alert-color-level:                 6 !default;
+
+$btn-default-color: #333;
+$btn-default-bg: #fff;
+$btn-default-border: #ccc;
+
+$input-btn-focus-width:         .5rem !default;
+$btn-primary-color: #fff;
+
+$dropdown-link-color: $blue !default;
+
+
+$font-size-base: .89rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-md: $font-size-base * 1.15 !default;
+$font-size-sm: $font-size-base * 0.75 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.225 !default;
+$h5-font-size: $font-size-base * 1.15 !default;
+$h6-font-size: $font-size-base !default;
+
+$popover-font-size: $font-size-md !default;
+
+$modal-fade-transform:              translateX(-50%) !default;
+$modal-show-transform:              translateY(9%) !default;
+$modal-transition:                  transform .3s ease !default;
+$modal-scale-transform:             scale(1) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 900px,
+        lg: 1060px,
+        xl: 1140px
+) !default;
+
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.nav-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Default appears as grey
+.btn-default {
+  color: $btn-default-color !important;
+  background: $btn-default-bg !important;
+  border: 1px solid $btn-default-border !important;
+}
+
+.btn-primary {
+  color: $btn-primary-color !important;
+  background: $green !important;
+  border: 1px solid $btn-default-border !important;
+}
+
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+
+
+.toggle-split {
+  border-left: 1px solid #ccc;
+}
+
+.dropdown-toggle-split {
+  border-right: 1px solid #ccc !important;
+  margin-right: 20px;
+
+  &::after {
+    margin-left: 20px !important;
+  }
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+
+.alert-green {
+  color: #fff;
+  background-color: #0c9a0f;
+  border-color: rgba(16, 129, 30, 0.8);
+}

@@ -1,32 +1,5 @@
 $(function () {
 
-  $('.date-range__control').on('change', function (e) {
-    var $control = $(this);
-    var $custom = $('.date-range__custom');
-    if ($control.val() === 'custom') {
-      $('#modal-custom-range').modal('show');
-
-    } else {
-      $('#modal-custom-range').modal('hide');
-      $('.change-date-range-container').hide();
-      $('.import-results-date-range-label').text(" - " + $control.val())
-    }
-  });
-
-  $(".change-date-range").on("click", function (e) {
-    e.preventDefault();
-    $('#modal-custom-range').modal('show');
-  });
-
-  $('#modal-custom-range').on('hide.bs.modal', function () {
-    $('.datepicker').hide();
-    $('.change-date-range-container').show().css("display", "inline-block");
-  });
-
-  $('#rangeSelect').on('click', function () {
-    $('.import-results-date-range-label').html('- Aug 15, 2017 - Aug 15, 2018 ')
-  });
-
   $("#saveBtn2").on("click", function (e) {
     e.preventDefault();
     $('#schedule-import').modal('hide');
@@ -67,107 +40,6 @@ $(function () {
     });
   });
 
-  /*  var popoverTemplate = ['<div class="popover scheduleReport" role="tooltip"><div class="arrow"></div><h3 class="popover-header">Schedule Import Report</h3><div class="popover-body"></div></div>'].join('');
- 
-   var content = ['<div><a href="#" id="open-import-form"  class="schedule">Add New </a></div><div><a href="#" id="manage-import">Manage Reports</a></div>'].join('');
- 
-  $('body').popover({
-     selector: '[data-toggle=popover]',
-     template: popoverTemplate,
-     content: content,
-     html: true,
-     trigger: 'focus'
-   });*/
-
-
-/*
-  const formId = "importSchedule"; // ID of the form
-  const url = location.href; //  href for the page
-  const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
-  const saveButton = document.querySelector("#saveBtn2"); // select save button
-  const wrapper = document.querySelector(".wrapper");
-  const savedForm = document.querySelector(".savedForm");
-  const closeModal = document.querySelector("#savedFormCancel");
-  const alertBox = document.querySelector("#alertMessage");
-  let message = "Your report has been scheduled!";
-  let iconCounter;
-  let form = document.querySelector(`#${formId}`), // select form
-    formElements = form.elements; // get the elements in the form
-
-  const getFormData = () => {
-    let data = {[formIdentifier]: {}}; // create an empty object with the formIdentifier as the key and an empty object as its value
-    for (const element of formElements) {
-      if (element.name.length > 0) {
-        data[formIdentifier][element.name] = element.value;
-      }
-    }
-    return data;
-  };
-
-  const displayAlert = message => {
-    alertBox.innerText = message; // add the message into the alert box
-    wrapper.style.display = "none";
-    alertBox.style.display = "block"; // make the alert box visible
-    savedForm.style.display = "block";
-    setTimeout(function () {
-      alertBox.style.display = "none"; // hide the alert box after 1 second
-    }, 4200);
-    //alertBox.alert();
-
-  };
-
-  if (saveButton) {
-    saveButton.addEventListener('click', function (event) {
-      event.preventDefault();
-      data = getFormData();
-      localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
-      displayAlert(message);
-
-    });
-  }
-
- /* if (closeModal) {
-    closeModal.addEventListener('click', function (event) {
-
-      const addFormIcon = $('#newStudentImportReport');
-
-      let formIcons = ["icon-calendar-plus-1", "icon-calendar-plus-2", "icon-calendar-plus-3", "icon-calendar-plus-4", "icon-calendar-plus-5", "icon-calendar-plus-6", "icon-calendar-plus-7", "icon-calendar-plus-8", "icon-calendar-plus-9", "icon-calendar-plus-9-plus"];
-
-      for (iconCounter = 0; iconCounter < formIcons.length; iconCounter++) {
-
-        if (formIcons[0]) {
-          addFormIcon.children().replaceWith('<span class="' + formIcons[0] + ' ' + 'text-secondary"></span>');
-          $('.wrapper').show();
-          $('.savedForm').hide();
-          break;
-        } else if (formIcons[1]) {
-          addFormIcon.children().replaceWith('<span class="' + formIcons[1] + ' ' + 'text-secondary"></span>');
-          $('.wrapper').show();
-          $('.savedForm').hide();
-          break;
-        } else if (formIcons[2]) {
-          addFormIcon.children().replaceWith('<span class="' + formIcons[2] + ' ' + 'text-secondary"></span>');
-          $('.wrapper').show();
-          $('.savedForm').hide();
-          break;
-        }
-      }
-      return iconCounter;
-
-    });
-  }*/
-
-
-  const populateForm = () => {
-    if (localStorage.key(formIdentifier)) {
-      const savedData = JSON.parse(localStorage.getItem(formIdentifier)); // get and parse the saved data from localStorage
-      for (const element of formElements) {
-        if (element.name in savedData) {
-          element.value = savedData[element.name];
-        }
-      }
-    }
-  };
 
 /*  $('#schedule-import').on('hidden.bs.modal', function (e) {
     $('#sImport').show();
@@ -175,13 +47,24 @@ $(function () {
 
   });*/
 
-  $('.modal').on('click', '#closeBtn', function (event) {
-    $('.sImport').show();
-    $('.modal').hide();
-  //  populateForm();
-  });
+  // Get the modal
+/*  var theModal = document.getElementById('schedule-import');
 
-  $('body').on('click', '#editForm', function (event) {
+// When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == theModal) {
+      modal.hide();
+    }
+  }*/
+
+/*  $('.modal').on('click', '#closeBtn, .btn-close, .modal-backdrop', function (event) {
+   // $('.sImport').show();
+    $('.modal, .modal-backdrop').hide().removeClass('show');
+    $('body').removeClass('modal-open')
+  //  populateForm();
+  });*/
+
+ /* $('body').on('click', '#editForm', function (event) {
     $('.wrapper').show();
     $('.savedForm').hide();
     populateForm();
@@ -204,7 +87,7 @@ $(function () {
     var deleteMessage = $('#deleteMessage'),
         removeHighlight = $('.savedForm').find('.bg-light').removeClass('bg-light');
     deleteMessage.fadeOut();
-  });
+  });*/
 });
 
 (function (window, $) {
