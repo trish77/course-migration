@@ -1,12 +1,18 @@
 // Custom bootstrap variable overrides
-//@import "bootstrap_variable_overrides";
 
 // Bootstrap and its default variables
+@import "bootstrap/functions";
+
+@import "variables";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 @import "bootstrap/bootstrap";
 
+
 // Your style
-@import "variables";
-@import "mixins";
+
+
 @import "general";
 @import "layout";
 @import "datatables";

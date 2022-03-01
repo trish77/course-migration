@@ -170,13 +170,39 @@
       <div class="btn btn-secondary btnScheduled">Scheduled</div>
       <div class="btn btn-secondary btnProcessing">Processing</div>
       <div class="btn btn-secondary btnFinished">Finished</div>
-
     </div>
   </div>
 </form>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<div id="schedule-import" class="modal fade modal-report" tabindex="-1" aria-hidden="true">
+<div id="schedule-import" class="modal fade modal-report"  tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -193,7 +219,7 @@
           <p class="text-left my-2">Migrations can be scheduled to begin as soon as 5 minutes after the current
             time.</p>
           <!-- Text input-->
-          <div class="row mt-3">
+          <div class="mt-3">
             <div class="col">
               <label for="name" class="control-label text-left"> Name</label>
               <sup><span class="icon-asterisk text-warning"></span></sup>
@@ -201,7 +227,7 @@
             </div>
           </div>
           <!-- Text input-->
-          <div class="row mt-3 text-left">
+          <div class="mt-3 text-left">
             <div class="col">
               <label for="Email" class="control-label">Email Address</label>
               <sup><span class="icon-asterisk text-warning"></span></sup>
@@ -222,209 +248,19 @@
             </div>
           </div>
           <!-- Text input-->
-
+        </form>
           <div class="modal-footer">
             <div class="pull-left">
               <button type="submit" id="saveBtn2" class="btn btn-primary align-items-end">Save Schedule</button>
               <button class="btn btn-secondary" id="closeBtn" data-bs-dismiss="modal">Cancel</button>
             </div>
           </div>
-        </form>
+
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal-report" class="modal fade modal-admin-lg modal-report" tabindex="-1" aria-hidden="false">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
-            class="icon-times-rectangle"></span></button>
-        <div class="text-center report-header">
-          <div class="h3">HLC Test Facility</div>
-          <div class="h2">Student Badge Import In Progress Report</div>
-          <div class="h4"><strong>Date Range:</strong> Jul 01, 2018 through Jul 31, 2018</div>
-          <div class="h4"><strong>Report Generated:</strong> Aug 16, 2018, 2:18 pm ET</div>
-        </div>
-      </div>
-      <div class="modal-body">
-        <article>
-          <div id="divHasRecords">
-            <section class="report-tables">
-              <div class="table-wrapper">
-                <div id="divNoImportStatusSummaryRecords">
-                </div>
-                <table class="student-import-results">
-                  <thead>
-                  <tr class="title">
-                    <th colspan="4">
-                      <h2>Import Status Summary</h2>
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr class="table-row stripe">
-                    <th>Update Day</th>
-                    <th>Institution</th>
-                    <th>Status</th>
-                    <th>Records</th>
-                  </tr>
-                  <tr class="table-row">
-                    <td>7/11/2018</td>
-                    <td>ARSVH - St. Vincent Health System - Little Rock</td>
-                    <td>Completed</td>
-                    <td>30</td>
-                  </tr>
-                  <tr class="table-row">
-                    <td>7/11/2018</td>
-                    <td>CHHME - CHI Health at Home - Home Medical Equipment</td>
-                    <td>Completed</td>
-                    <td>14</td>
-                  </tr>
-                  <tr class="table-row stripe">
-                    <td>7/19/2018</td>
-                    <td>CHHCO - CHI Health at Home - Corporate Staff</td>
-                    <td>Completed</td>
-                    <td>15</td>
-                  </tr>
-                  <tr class="table-row">
-                    <td>7/19/2018</td>
-                    <td>CHHCO - CHI Health at Home - Corporate Staff</td>
-                    <td>Failed</td>
-                    <td>2</td>
-                  </tr>
-                  </tbody>
-                </table>
-                Test
-              </div>
-            </section>
-            <!-- /REPORT GROUP TABLE AREA -->
-            <!-- REPORT GROUP TABLE AREA -->
-            <section class="report-tables">
-              <!-- REPORT GROUP TABLE FOR ITEM -->
-              <div class="table-wrapper">
-                <div id="divNoImportActionsRecords">
-                </div>
-                <table class="student-import-results">
-                  <tbody>
-                  <tr class="title">
-                    <th colspan="8">
-                      <h2>Import Action Summary</h2>
-                    </th>
-                  </tr>
-                  <tr class="table-row stripe">
-                    <th>Update Day</th>
-                    <th>Institution</th>
-                    <th>Students Added</th>
-                    <th>Students Updated</th>
-                    <th>Users Removed</th>
-                    <th>Departments Added</th>
-                    <th>Job Titles Added</th>
-                    <th>Custom Vals Added</th>
-                  </tr>
-                  <tr class="table-row">
-                    <td>7/11/2018</td>
-                    <td>ARSVH - St. Vincent Health System - Little Rock</td>
-                    <td>6</td>
-                    <td>24</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0/0/0/0</td>
-                  </tr>
-                  <tr class="table-row stripe">
-                    <td>7/11/2018</td>
-                    <td>CHHCO - CHI Health at Home - Corporate Staff</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0/0/0/0</td>
-                  </tr>
-                  <tr class="table-row">
-                    <td>7/11/2018</td>
-                    <td>CHHME - CHI Health at Home - Home Medical Equipment</td>
-                    <td>6</td>
-                    <td>24</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0/0/0/0</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /REPORT GROUP TABLE FOR ITEM -->
-            </section>
-            <!-- /REPORT GROUP TABLE AREA -->
-            <!-- REPORT GROUP TABLE AREA -->
-            <section class="report-tables">
-              <!-- REPORT GROUP TABLE FOR ITEM -->
-              <div class="table-wrapper">
-                <div id="divImportErrorDetailRecords">
-                </div>
-                <table class="student-import-results error-detail with-counter">
-                  <tbody>
-                  <tr class="title">
-                    <th colspan="6">
-                      <h2>Import Error Detail</h2>
-                    </th>
-                  </tr>
-                  <tr class="table-row stripe">
-                    <th></th>
-                    <th>Date</th>
-                    <th>Institution</th>
-                    <th>Student</th>
-                    <th>Student ID</th>
-                    <th>Error Message</th>
-                  </tr>
-                  <tr class="table-row">
-                    <td></td>
-                    <td>7/11/2018</td>
-                    <td>N/A</td>
-                    <td>Berry, Karen L</td>
-                    <td>FCP5587</td>
-                    <td>Institution not found with code: 34357.</td>
-                  </tr>
-                  <tr class="table-row stripe">
-                    <td></td>
-                    <td>7/19/2018</td>
-                    <td>N/A</td>
-                    <td>Fialkowski, Lori J</td>
-                    <td>HEJ9003</td>
-                    <td>Institution not found with code: 33608.</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /REPORT GROUP TABLE FOR ITEM -->
-            </section>
-            <!-- /REPORT GROUP TABLE AREA -->
-          </div>
-        </article>
-      </div>
-      <div class="modal-footer">
-        <div class="pull-left">
-          <div class="btn-group">
-            <div class="btn-group dropup">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Export <i
-                  class="fa fa-caret-up"></i>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">CSV</a></li>
-                <li><a href="#">Excel</a></li>
-              </ul>
-            </div>
-          </div>
-          <button class="btn btn-default" data-dismiss="modal">Print</button>
-          <button class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div id="modal-student-import-progress" class="modal fade modal-report" tabindex="-1" aria-hidden="false">
   <div class="modal-dialog  modal-xl">
     <div class="modal-content">

@@ -3,17 +3,17 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
-$bs-gray-100: #f8f9fa !default;
-$bs-gray-200: #e9ecef !default;
-$bs-gray-300: #dee2e6 !default;
-$bs-gray-400: #ced4da !default;
-$bs-gray-500: #adb5bd !default;
-$bs-gray-600: #6c757d !default;
-$bs-gray-700: #495057 !default;
-$bs-gray-800: #343a40 !default;
-$bs-gray-900: #212529 !default;
-$black:    #000 !default;
+$white:    #fff;
+$bs-gray-100: #f8f9fa;
+$bs-gray-200: #e9ecef;
+$bs-gray-300: #dee2e6;
+$bs-gray-400: #ced4da;
+$bs-gray-500: #adb5bd;
+$bs-gray-600: #6c757d;
+$bs-gray-700: #495057;
+$bs-gray-800: #343a40;
+$bs-gray-900: #212529;
+$black:    #000;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -33,85 +33,93 @@ $grays: (
 // fusv-enable
 
 
-$bs-blue: #09c !default;
-$bs-pink: #e83e8c !default;
-$bs-red: #d9534f !default;
-$bs-orange: #fc7b00 !default;
-$bs-yellow: #8a6d3b !default;
-$bs-green: #5cb85c !default;
-$bs-teal: #3c763d !default;
-$bs-cyan: #31708f !default;
+$bs-blue: #09c ;
+$bs-pink: #e83e8c ;
+$bs-red: #d9534f ;
+$bs-orange: #fc7b00 ;
+$bs-yellow: #8a6d3b ;
+$bs-green: #5cb85c ;
+$bs-teal: #3c763d ;
+$bs-cyan: #31708f ;
 
 
 $btn-font-weight: normal;
 
 
-$primary: $bs-blue !default;
-$secondary: $bs-gray-400 !default;
-$attention: $bs-orange !default;
-$success: $bs-green !default;
-$info: #07a8f9 !default;
-$warning: $bs-yellow !default;
-$danger: $bs-red !default;
-$light: $bs-gray-200 !default;
-$dark: $bs-gray-800 !default;
+$primary: $bs-blue;
+$secondary: $bs-gray-400;
+$attention: $bs-orange;
+$success: $bs-green;
+$info: #07a8f9;
+$warning: $bs-yellow;
+$danger: $bs-red;
+$light: $bs-gray-200;
+$dark: $bs-gray-800;
 
 
-$theme-colors: () !default;
+$theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
-                (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "success": $success,
-                  // "info": $info,
-                        "warning": $warning,
-                        "danger": $danger,
-                        "light": $light,
-                        "dark": $dark
-                ),
-                $theme-colors
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+  ),
+  $theme-colors
 );
 
-$alert-bg-level:                    -10 !default;
-$alert-border-level:                -8 !default;
-$alert-color-level:                 6 !default;
+$alert-bg-level:                    -10 ;
+$alert-border-level:                -8 ;
+$alert-color-level:                 6 ;
 
 $btn-default-color: #333;
 $btn-default-bg: #fff;
 $btn-default-border: #ccc;
 
-$input-btn-focus-width:         .5rem !default;
+$input-btn-focus-width:         .2rem ;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) ;
+$input-btn-focus-width:       .2rem;
+$form-select-focus-width:     .2rem;
 $btn-primary-color: #fff;
+$form-select-focus-width:     .2rem;
+$component-active-bg:         $primary ;
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-box-shadow:    0 0 .2 .2rem $input-btn-focus-color ;
+$form-select-focus-box-shadow:    0 0 0 .2rem $input-btn-focus-color ;
+$dropdown-link-color: $bs-blue ;
 
-$dropdown-link-color: $blue !default;
 
+$font-size-base: .89rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-md: $font-size-base * 1.15;
+$font-size-sm: $font-size-base * 0.75;
 
-$font-size-base: .89rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25 !default;
-$font-size-md: $font-size-base * 1.15 !default;
-$font-size-sm: $font-size-base * 0.75 !default;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.225;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.225 !default;
-$h5-font-size: $font-size-base * 1.15 !default;
-$h6-font-size: $font-size-base !default;
+$popover-font-size: $font-size-md;
 
-$popover-font-size: $font-size-md !default;
-
-$modal-fade-transform:              translateX(-50%) !default;
-$modal-show-transform:              translateY(9%) !default;
-$modal-transition:                  transform .3s ease !default;
-$modal-scale-transform:             scale(1) !default;
+$modal-fade-transform:              translateX(-50%);
+$modal-show-transform:              translateY(9%);
+$modal-transition:                  transform .3s ease;
+$modal-scale-transform:             scale(1) ;
 
 $container-max-widths: (
         sm: 540px,
         md: 900px,
         lg: 1060px,
         xl: 1140px
-) !default;
+) ;
 
 
 .btn-outline-secondary {
@@ -133,7 +141,7 @@ $container-max-widths: (
 
 .btn-primary {
   color: $btn-primary-color !important;
-  background: $green !important;
+  background: $bs-green !important;
   border: 1px solid $btn-default-border !important;
 }
 

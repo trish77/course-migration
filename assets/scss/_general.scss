@@ -24,7 +24,9 @@
 }
 
 a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
-  outline-width: 0px;
+  outline-width: 0;
+  box-shadow: 0 0 0 .1rem rgba(var(--bs-btn-focus-shadow-rgb),.5) !important;
+  --bs-btn-focus-box-shadow: 0 0 0 .5rem rgba(var(--bs-btn-focus-shadow-rgb),.5) !important01;
 }
 
 .h1 {
